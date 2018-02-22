@@ -46,9 +46,11 @@ SDL安全设计核心原则:
 > - 限定可访问到代码的人员身份
 > - 降低代码执行所需权限
 
-常见的攻击面分析技巧如下表:![img](http://docs.ioin.in/writeup/cryin.startblog.cc/_articles_article_40/2017022210005799cb5c-8e68-4922-ab09-047cff40e4fe.png)
+常见的攻击面分析技巧如下表:
+![img](http://docs.ioin.in/writeup/cryin.startblog.cc/_articles_article_40/2017022210005799cb5c-8e68-4922-ab09-047cff40e4fe.png)
 
-攻击面最小化在微软的应用实践示例:![img](http://docs.ioin.in/writeup/cryin.startblog.cc/_articles_article_40/20170222100074fa3730-16f1-441f-9e71-827a981dcf10.png)
+攻击面最小化在微软的应用实践示例:
+![img](http://docs.ioin.in/writeup/cryin.startblog.cc/_articles_article_40/20170222100074fa3730-16f1-441f-9e71-827a981dcf10.png)
 
 ### 基本隐私
 
@@ -113,7 +115,7 @@ Tips:
 > - 提出安全建议及对潜在威胁的缓解措施
 > - 对安全设计进行验证并对整个设计方案进行回顾并再次确认
 
-微软使用的威胁建模方法是STRIDE威胁建模方法。为了便于安全人员快速便捷的进行威胁建模，微软开发基于STRIDE威胁建模方法的[SDL Threat Modeling Tool]( [https://www.microsoft.com/en-us/sdl/adopt/threatmodeling.aspx)威胁建模工具，该工具可以帮助安全人员画数据流图、分析威胁、生成并导出威胁建模报告](https://www.microsoft.com/en-us/sdl/adopt/threatmodeling.aspx)%E5%A8%81%E8%83%81%E5%BB%BA%E6%A8%A1%E5%B7%A5%E5%85%B7%EF%BC%8C%E8%AF%A5%E5%B7%A5%E5%85%B7%E5%8F%AF%E4%BB%A5%E5%B8%AE%E5%8A%A9%E5%AE%89%E5%85%A8%E4%BA%BA%E5%91%98%E7%94%BB%E6%95%B0%E6%8D%AE%E6%B5%81%E5%9B%BE%E3%80%81%E5%88%86%E6%9E%90%E5%A8%81%E8%83%81%E3%80%81%E7%94%9F%E6%88%90%E5%B9%B6%E5%AF%BC%E5%87%BA%E5%A8%81%E8%83%81%E5%BB%BA%E6%A8%A1%E6%8A%A5%E5%91%8A)。
+微软使用的威胁建模方法是STRIDE威胁建模方法。为了便于安全人员快速便捷的进行威胁建模，微软开发基于STRIDE威胁建模方法的[SDL Threat Modeling Tool]( https://www.microsoft.com/en-us/sdl/adopt/threatmodeling.aspx)威胁建模工具，该工具可以帮助安全人员画数据流图、分析威胁、生成并导出威胁建模报告。
 
 ## STRIDE威胁建模方法
 
@@ -134,11 +136,13 @@ STRIDE威胁建模的一般流程如下:
 
 ### 数据流图
 
-数据流图(Data Flow Diagrams)包含外部实体(External Entity)、处理过程(Process)、数据流(Data Flow)、数据存储(Data Store)，安全人员与系统架构师及设计人员沟通，了解设计详情并画出数据流图后还需要标注信任边界（Trust Boundary），针对简单的Web应用的数据流图如下:![数据流图示例及元素类型](http://docs.ioin.in/writeup/cryin.startblog.cc/_articles_article_40/201702221000211f5a09-1dd8-4928-b068-0e587c265dd2.png)
+数据流图(Data Flow Diagrams)包含外部实体(External Entity)、处理过程(Process)、数据流(Data Flow)、数据存储(Data Store)，安全人员与系统架构师及设计人员沟通，了解设计详情并画出数据流图后还需要标注信任边界（Trust Boundary），针对简单的Web应用的数据流图如下:
+![数据流图示例及元素类型](http://docs.ioin.in/writeup/cryin.startblog.cc/_articles_article_40/201702221000211f5a09-1dd8-4928-b068-0e587c265dd2.png)
 
 ### 识别威胁
 
-STRIDE威胁建模方法已经明确了每个数据流图元素具有不同的威胁，其中外部实体只有仿冒（S）、抵赖（R）威胁，数据流只有篡改（T）、信息泄露（I）、拒绝服务（D）威胁，处理过程有所有六种（STRIDE）威胁，存储过程有篡改（T）、信息泄露（I）、拒绝服务（D）威胁，但如果是日志类型存储则还有抵赖（R）威胁。具体可以对照如下表格进行威胁识别:![img](http://docs.ioin.in/writeup/cryin.startblog.cc/_articles_article_40/2017022210002a5ec229-ae24-4b06-9dff-03a8cfceb6df.png)
+STRIDE威胁建模方法已经明确了每个数据流图元素具有不同的威胁，其中外部实体只有仿冒（S）、抵赖（R）威胁，数据流只有篡改（T）、信息泄露（I）、拒绝服务（D）威胁，处理过程有所有六种（STRIDE）威胁，存储过程有篡改（T）、信息泄露（I）、拒绝服务（D）威胁，但如果是日志类型存储则还有抵赖（R）威胁。具体可以对照如下表格进行威胁识别:
+![img](http://docs.ioin.in/writeup/cryin.startblog.cc/_articles_article_40/2017022210002a5ec229-ae24-4b06-9dff-03a8cfceb6df.png)
 
 ### 缓解措施
 
@@ -151,7 +155,8 @@ STRIDE威胁建模方法已经明确了每个数据流图元素具有不同的�
 
 在提出缓解措施时，有的时候不仅要考虑安全问题，同时也要考虑软件的易用性，所以不同的威胁，不同的应用场景。其缓解措施也要随之而改变以提高应用安全的同时也能给用户带来较好的交互体验。
 
-微软对于常用的威胁给出了其常用的标准缓解措施，并在具体实施时已将常用的缓解方案及措施集成为独立的解决方案或者代码模块。可以方便同类应用直接使用。![img](http://docs.ioin.in/writeup/cryin.startblog.cc/_articles_article_40/2017022210000d4d8080-5a7f-4b02-898b-5a73e4716442.png)
+微软对于常用的威胁给出了其常用的标准缓解措施，并在具体实施时已将常用的缓解方案及措施集成为独立的解决方案或者代码模块。可以方便同类应用直接使用。
+![img](http://docs.ioin.in/writeup/cryin.startblog.cc/_articles_article_40/2017022210000d4d8080-5a7f-4b02-898b-5a73e4716442.png)
 
 ### 安全验证
 
@@ -163,8 +168,8 @@ SDL的核心理念是将安全考虑集成在软件开发的每一个阶段:需�
 
 ## 参考文献
 
-[1] <https://www.microsoft.com/en-us/SDL/process/design.aspx>
-[2] <http://www.microsoft.com/en-us/sdl/adopt/threatmodeling.aspx>
-[3] Introduction_to_Threat_Modeling
-[4] Simplified Implementation of the SDL
-[5] https://github.com/Cryin/Paper
+* https://www.microsoft.com/en-us/SDL/process/design.aspx
+* http://www.microsoft.com/en-us/sdl/adopt/threatmodeling.aspx
+* Introduction_to_Threat_Modeling
+* Simplified Implementation of the SDL
+* https://github.com/Cryin/Paper
