@@ -139,6 +139,7 @@ STRIDE威胁建模的一般流程如下:
 ### 数据流图
 
 数据流图(Data Flow Diagrams)包含外部实体(External Entity)、处理过程(Process)、数据流(Data Flow)、数据存储(Data Store)，安全人员与系统架构师及设计人员沟通，了解设计详情并画出数据流图后还需要标注信任边界（Trust Boundary），针对简单的Web应用的数据流图如下:
+
 ![数据流图示例及元素类型](http://docs.ioin.in/writeup/cryin.startblog.cc/_articles_article_40/201702221000211f5a09-1dd8-4928-b068-0e587c265dd2.png)
 
 ### 识别威胁
