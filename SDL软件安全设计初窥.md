@@ -47,9 +47,11 @@ SDL安全设计核心原则:
 > - 降低代码执行所需权限
 
 常见的攻击面分析技巧如下表:
+
 ![img](http://docs.ioin.in/writeup/cryin.startblog.cc/_articles_article_40/2017022210005799cb5c-8e68-4922-ab09-047cff40e4fe.png)
 
 攻击面最小化在微软的应用实践示例:
+
 ![img](http://docs.ioin.in/writeup/cryin.startblog.cc/_articles_article_40/20170222100074fa3730-16f1-441f-9e71-827a981dcf10.png)
 
 ### 基本隐私
@@ -142,6 +144,7 @@ STRIDE威胁建模的一般流程如下:
 ### 识别威胁
 
 STRIDE威胁建模方法已经明确了每个数据流图元素具有不同的威胁，其中外部实体只有仿冒（S）、抵赖（R）威胁，数据流只有篡改（T）、信息泄露（I）、拒绝服务（D）威胁，处理过程有所有六种（STRIDE）威胁，存储过程有篡改（T）、信息泄露（I）、拒绝服务（D）威胁，但如果是日志类型存储则还有抵赖（R）威胁。具体可以对照如下表格进行威胁识别:
+
 ![img](http://docs.ioin.in/writeup/cryin.startblog.cc/_articles_article_40/2017022210002a5ec229-ae24-4b06-9dff-03a8cfceb6df.png)
 
 ### 缓解措施
@@ -156,6 +159,7 @@ STRIDE威胁建模方法已经明确了每个数据流图元素具有不同的�
 在提出缓解措施时，有的时候不仅要考虑安全问题，同时也要考虑软件的易用性，所以不同的威胁，不同的应用场景。其缓解措施也要随之而改变以提高应用安全的同时也能给用户带来较好的交互体验。
 
 微软对于常用的威胁给出了其常用的标准缓解措施，并在具体实施时已将常用的缓解方案及措施集成为独立的解决方案或者代码模块。可以方便同类应用直接使用。
+
 ![img](http://docs.ioin.in/writeup/cryin.startblog.cc/_articles_article_40/2017022210000d4d8080-5a7f-4b02-898b-5a73e4716442.png)
 
 ### 安全验证
